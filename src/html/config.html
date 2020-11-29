@@ -1,15 +1,24 @@
 <section class="settings">
-  <h2 class="settings-heading">Settings for sample plugin</h2>
-  <p class="kintoneplugin-desc">This message is displayed on the app page after the app has been updated.</p>
-  <form class="js-submit-settings">
-    <p class="kintoneplugin-row">
-      <label for="message">
-        Message:
-        <input type="text" class="js-text-message kintoneplugin-input-text">
-      </label>
-    </p>
-    <p class="kintoneplugin-row">
-        <button class="kintoneplugin-button-normal">Save</button>
-    </p>
-  </form>
+  <div class="block-btn">
+    <div class="kintoneplugin-outer">
+      <button id="cancel" class="kintoneplugin-button-dialog-cancel">キャンセル</button>
+      <button id="submit" class="kintoneplugin-button-dialog-ok">保存</button>
+    </div>
+  </div>
+  <hr>
+  <div class="block">
+    <h3>プラグインの有効化</h3>
+    <p>チェックをつけるとプラグインが有効になります。</p>
+    <div class="kintoneplugin-outer">
+      <div id="plugin-config-area-isEnabled"></div>
+    </div>
+  </div>
+  <div class="block">
+    <h3>フィールドの設定</h3>
+    <p>対応する各フィールドを選択してください。</p>
+    <p>地域用のドロップダウン/都道府県表示用のスペース/都道府県用のドロップダウン フィールドを<b>最低1つずつ</b>配置してください。</p>
+    <div class="kintoneplugin-outer">
+      <div id="plugin-config-area-selectFields-table"></div>
+    </div>
+  </div>
 </section>
