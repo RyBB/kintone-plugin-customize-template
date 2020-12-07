@@ -5,6 +5,7 @@ module.exports = {
   mode: 'development',
   entry: {
     desktop: './src/js/desktop.js',
+    mobile: './src/js/mobile.js',
     config: './src/js/config.js'
   },
   output: {
@@ -18,13 +19,14 @@ module.exports = {
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env']
+          presets: ['@babel/preset-env'],
+          plugins: ['@babel/plugin-transform-runtime'],
         }
       }
     }]
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js', '.json']
   },
   plugins: [
     new KintonePlugin({
